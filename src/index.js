@@ -11,8 +11,8 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         {/* <Route index element ={<Login/>} /> */}
-        <Route path="/" element={<From />} />
-        <Route path="TodoList" element={<App />} />
+        <Route path="/Login" element={<From />} />
+        <Route path="/" element={<App />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -10,6 +10,10 @@ const Form = () => {
   function submitForm() {
     setIsSubmitted(true);
   }
+
+  const handleClick = () => {
+    setIsSubmitted(!isSubmitted);
+  };
   return (
     <>
       <div className="form-container">
@@ -17,8 +21,9 @@ const Form = () => {
         <div className="form-content-left">
           <img className="form-img" src="https://raw.githubusercontent.com/briancodex/react-form-v1/286f4a4603bda257ae001dc57c74d7f30bd4eedb/public/img/img-2.svg" alt="spaceship" />
         </div>{" "}
-        {!isSubmitted ? <FormSignup submitForm={submitForm} /> : <FromLogin />}{" "}
+        {!isSubmitted ? <FormSignup submitForm={submitForm} /> : <FromLogin />}
       </div>{" "}
+      <button onClick={handleClick}>button</button>
     </>
   );
 };
